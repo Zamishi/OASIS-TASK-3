@@ -1,2 +1,2 @@
-# OASIS-TASK-1
-Online Reservation System
+# ONLINE RESERVATION SYSTEM
+
