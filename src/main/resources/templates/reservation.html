@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .reservation-container {
+            max-width: 600px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container reservation-container">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title text-center">Reservation Form</h4>
+                <form action="#" th:action="@{/reservation}" th:object="${reservation}" method="post">
+                    <div class="form-group">
+                        <label for="trainNumber">Train Number</label>
+                        <input type="text" class="form-control" id="trainNumber" th:field="*{trainNumber}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="trainName">Train Name</label>
+                        <input type="text" class="form-control" id="trainName" th:field="*{trainName}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="classType">Class Type</label>
+                        <select class="form-control" id="classType" th:field="*{classType}" required>
+                            <option value="First Class">First Class</option>
+                            <option value="Second Class">Second Class</option>
+                            <option value="Third Class">Third Class</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="journeyDate">Date of Journey</label>
+                        <input type="date" class="form-control" id="journeyDate" th:field="*{journeyDate}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fromPlace">From</label>
+                        <input type="text" class="form-control" id="fromPlace" th:field="*{boardingStation}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="toDestination">To</label>
+                        <input type="text" class="form-control" id="toDestination" th:field="*{destinationStation}" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Reserve</button>
+                </form>
+                <div class="mt-3">
+                    <div class="text-success" th:text="${message}"></div>
+                </div>
+                <p class="text-center"><a href="/dashboard">Back to Dashboard</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

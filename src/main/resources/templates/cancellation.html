@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancellation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .cancellation-container {
+            max-width: 600px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container cancellation-container">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title text-center">Cancellation Form</h4>
+                <form action="#" th:action="@{/cancellation}" method="post">
+                    <div class="form-group">
+                        <label for="reservationId">Reservation ID</label>
+                        <input type="text" class="form-control" id="reservationId" name="reservationId" required>
+                    </div>
+                    <button type="submit" class="btn btn-danger btn-block">Cancel</button>
+                </form>
+                <div class="mt-3">
+                    <div class="text-success" th:text="${message}"></div>
+                    <div class="text-danger" th:text="${error}"></div>
+                </div>
+                <p class="text-center"><a href="/dashboard">Back to Dashboard</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
