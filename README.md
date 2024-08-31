@@ -1,11 +1,17 @@
-#ONLINE RESERVATION SYSTEM
+# ONLINE RESERVATION SYSTEM
+
 As part of my internship with Oasis Infobyte, I developed an Online Reservation System using Java in Spring Tool Suite (STS) with Maven for dependency management. The project was designed to streamline the reservation process, offering users a seamless and intuitive interface for booking, managing, and cancelling reservations.
 
 Project Overview:
 The Online Reservation System is a comprehensive application that manages various aspects of reservations, including user authentication, booking, and cancellations. The system provides a user-friendly interface with robust backend functionalities, ensuring a smooth and secure experience for all users.
 
 Key Features:
+
 User Authentication:
+
+
+https://github.com/user-attachments/assets/e1388450-656b-4687-aadb-4af02af69543
+
 
 Implemented a secure login system that allows users to register, log in, and manage their profiles. Passwords are securely stored, and user sessions are managed to ensure data security.
 ![Screenshot 2024-08-31 150021](https://github.com/user-attachments/assets/584093c1-3f43-4df8-8cc5-3e99e6112384)
